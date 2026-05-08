@@ -203,7 +203,7 @@ See attached files:
 ---
 
 **Report prepared by**: OSINT Security Services  
-**Contact**: security@osint-services.com  
+**Contact**: 600589mbm@gmail.com  
 **Website**: https://osint-services.com  
 **PGP Key**: `0xABC123DEF456`  
 **Follow**: [@OSINT_Security](https://twitter.com/osint_security)

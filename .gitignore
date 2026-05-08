@@ -14,6 +14,7 @@ clients/
 !clients/.gitkeep
 reports/*
 !reports/sample-megaeth.md
+!reports/sample-megaeth.html
 
 # IDE
 .vscode/
