@@ -1,6 +1,6 @@
-# OSINT Security Services
+# abcore pro security
 
-Professional penetration testing services powered by automation + AI.
+Basic Website Audit & Pentesting with raw data included.
 
 **Website:** https://600589mbm-beep.github.io/OSINTSecuritybusiness/
 
@@ -8,34 +8,20 @@ Professional penetration testing services powered by automation + AI.
 
 | Package | Price | Delivery |
 |----------|-------|-----------|
-| Basic Website Audit | $500 | 24-48h |
-| Standard Crypto DD | $800 | 48-72h |
-| Premium Full Pentest | $1000+ | 5-7 days |
+| Basic Website Audit | $199 | 2-3 days |
+| Audit + Basic Pentest | $499 | 3-5 days |
+| Multi-Site Audit | Custom | 5-10 days |
 
-## Revenue Model
+## What We Check
 
-Target: **$5k-10k/month** by month 3-4.
+- Website Security Review (headers, SSL/TLS, exposed files)
+- WordPress / CMS Review (version, plugins, config risks)
+- Technical Website Health (broken pages, SEO, sitemap)
+- Public Exposure Review (files, directories, admin paths)
 
-| Month | Clients | Avg Price | Revenue |
-|--------|---------|-----------|----------|
-| 1 | 3 | $600 | $1,800 |
-| 2 | 5 | $650 | $3,250 |
-| 3 | 8 | $700 | $5,600 |
-| 4 | 12 | $750 | $9,000 |
-| 5 | 15 | $750 | $11,250 |
+## Tools Used
 
-## Tech Stack
-
-- **Recon:** theHarvester, Amass, Subfinder, httpx
-- **Scanning:** nmap, nuclei, ffuf, gobuster
-- **OSINT:** Maigret, Holehe, Sherlock
-- **Crypto:** Custom Polymarket edge detector
-- **Reporting:** Python + Markdown → PDF (pandoc)
-
-## Sample Report
-
-[MegaETH Airdrop Due Diligence](reports/sample-megaeth.md)  
-10-page report with Polymarket edge analysis. Risk score: 6/10.
+SSLyze, testssl.sh, Nuclei, Nikto, OWASP ZAP, Katana, httpx, Subfinder, WPScan, WhatWeb
 
 ## Setup
 
@@ -46,8 +32,9 @@ Target: **$5k-10k/month** by month 3-4.
 ## Contact
 
 - **Email:** 600589mbm@gmail.com
+- **Payment:** Stripe, PayPal, USDC/ETH
 
 ---
 
-**Built with:** hackingtool v2.0.0 (185+ tools) + Claude AI  
+**Built with:** Professional-grade open-source tooling + plain-English reporting
 **License:** MIT (code), Proprietary (reports)

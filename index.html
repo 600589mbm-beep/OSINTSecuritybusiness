@@ -1,293 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OSINT Security Services | $500-$1000 Pentests</title>
-    <meta name="description" content="Professional OSINT & penetration testing services. Website audits $500, Crypto due diligence $800, Full pentests $1000+. Fast automated recon with human review.">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Website Audit & Pentesting | abcore pro security</title>
+  <meta name="description" content="Get a basic website audit and light pentesting review using professional-grade open-source tools. Receive a plain-English report with raw scan data included.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container nav-inner">
-            <div class="logo">OSINT<span>Security</span></div>
-            <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#sample">Sample Report</a></li>
-                <li><a href="#why-us">Why Choose Us?</a></li>
-                <li><a href="#tools">Tools</a></li>
-                <li><a href="#contact" class="btn btn-outline">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">abcore pro <span>security</span></div>
+      <ul class="nav-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="sample-report.html">Sample Report</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html" class="btn btn-outline">Start Audit</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-badge">🛡️ Professional Security Assessments</div>
-            <h1>Penetration Testing<br><span class="highlight">That Scales</span></h1>
-            <p class="hero-subtitle">Automated recon + expert review. Website audits from $500. Crypto due diligence from $800. Delivered in 24-48 hours.</p>
-            <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary btn-lg">Get a Quote</a>
-                <a href="reports/sample-megaeth.html" class="btn btn-secondary btn-lg">📄 Free Sample Report</a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <div class="stat-number">24-48h</div>
-                    <div class="stat-label">Delivery Time</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">50%</div>
-                    <div class="stat-label">Less Than Firms</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">185+</div>
-                    <div class="stat-label">Security Tools</div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section class="hero">
+    <div class="container">
+      <h1>Basic Website Audit & Pentesting<br><span class="highlight">With Raw Data Included</span></h1>
+      <p class="hero-subtitle">We use professional-grade open-source tools to check your website for common security issues, misconfigurations, SSL/TLS problems, exposed files, CMS risks, and technical website problems — then deliver a clear report with the raw data included.</p>
+      <div class="hero-cta">
+        <a href="contact.html" class="btn btn-primary btn-lg">Get My Website Audit</a>
+        <a href="sample-report.html" class="btn btn-secondary btn-lg">View Sample Report</a>
+      </div>
+      <p class="trust-line">No scare tactics. No hidden data. Just clear findings, practical recommendations, and scan evidence you can review.</p>
+    </div>
+  </section>
 
-    <!-- Services -->
-    <section id="services" class="section">
-        <div class="container">
-            <h2 class="section-title">Services</h2>
-            <p class="section-subtitle">Choose the package that fits your security needs</p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🔍</div>
-                    <h3>Basic Website Audit</h3>
-                    <div class="price">$500</div>
-                    <ul>
-                        <li>✅ SSL/TLS configuration check</li>
-                        <li>✅ Header security analysis</li>
-                        <li>✅ Port scan (nmap)</li>
-                        <li>✅ Vulnerability scan (nuclei)</li>
-                        <li>✅ 5-page report with fixes</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline">Get Started</a>
-                </div>
-                <div class="service-card featured">
-                    <div class="badge">MOST POPULAR</div>
-                    <div class="service-icon">₿</div>
-                    <h3>Standard Crypto DD</h3>
-                    <div class="price">$800</div>
-                    <ul>
-                        <li>✅ Everything in Basic</li>
-                        <li>✅ Smart contract public audit</li>
-                        <li>✅ Team OSINT (Maigret, theHarvester)</li>
-                        <li>✅ Community sentiment analysis</li>
-                        <li>✅ 10-page report + risk score</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">⚔️</div>
-                    <h3>Premium Full Pentest</h3>
-                    <div class="price">$1000+</div>
-                    <ul>
-                        <li>✅ Everything in Standard</li>
-                        <li>✅ Authenticated testing</li>
-                        <li>✅ Custom exploit attempts</li>
-                        <li>✅ Social engineering assessment</li>
-                        <li>✅ 20+ page report</li>
-                    </ul>
-                    <a href="#contact" class="btn btn-outline">Get Started</a>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Know What Your Website Is Exposing</h2>
+      <p class="section-subtitle">Your website may have outdated software signals, missing security headers, exposed files, weak SSL settings, public admin paths, or technical issues that hurt trust and performance. We help you find the obvious problems before they become bigger ones.</p>
+    </div>
+  </section>
 
-    <!-- Sample Report -->
-    <section id="sample" class="section section-dark">
-        <div class="container">
-            <h2 class="section-title">Sample Report: MegaETH</h2>
-            <p class="section-subtitle">Real due diligence report — Polymarket market analysis included</p>
-            <div class="report-preview">
-                <div class="report-meta">
-                    <div class="meta-item">
-                        <span class="meta-label">Target</span>
-                        <span class="meta-value">MegaETH (megaeth.com)</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Risk Score</span>
-                        <span class="meta-value risk-medium">6/10 (Medium-High)</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Package</span>
-                        <span class="meta-value">Standard ($800)</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Polymarket Edge</span>
-                        <span class="meta-value edge-positive">YES @ 46.4% — UNDERVALUED</span>
-                    </div>
-                </div>
-                <div class="report-findings">
-                    <h4>Key Findings</h4>
-                    <table>
-                        <tr><th>Severity</th><th>Count</th><th>Status</th></tr>
-                        <tr><td><span class="sev-critical">Critical</span></td><td>0</td><td>—</td></tr>
-                        <tr><td><span class="sev-high">High</span></td><td>1</td><td>Open</td></tr>
-                        <tr><td><span class="sev-medium">Medium</span></td><td>3</td><td>Open</td></tr>
-                        <tr><td><span class="sev-low">Low</span></td><td>5</td><td>Open</td></tr>
-                    </table>
-                </div>
-                <a href="reports/sample-megaeth.html" class="btn btn-primary">📄 View Full Sample Report</a>
-            </div>
+  <section class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">What We Check</h2>
+      <p class="section-subtitle">Professional-grade open-source tooling — results delivered with raw data</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🛡️</div>
+          <h3>Website Security Review</h3>
+          <ul>
+            <li>Missing security headers</li>
+            <li>Weak SSL/TLS configuration</li>
+            <li>Exposed server information</li>
+            <li>Publicly visible sensitive files</li>
+            <li>Directory listing risks</li>
+            <li>Common CMS exposure</li>
+            <li>Basic vulnerability signals</li>
+          </ul>
         </div>
-    </section>
+        <div class="service-card">
+          <div class="service-icon">🔧</div>
+          <h3>WordPress / CMS Review</h3>
+          <ul>
+            <li>Version exposure</li>
+            <li>Plugin/theme exposure</li>
+            <li>Login page visibility</li>
+            <li>XML-RPC exposure</li>
+            <li>Common configuration risks</li>
+            <li>Public usernames where detectable</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📊</div>
+          <h3>Technical Website Health</h3>
+          <ul>
+            <li>Broken pages</li>
+            <li>Redirect chains</li>
+            <li>Indexing issues</li>
+            <li>Sitemap and robots.txt</li>
+            <li>Page speed signals</li>
+            <li>Mobile usability indicators</li>
+            <li>Metadata issues</li>
+          </ul>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔍</div>
+          <h3>Public Exposure Review</h3>
+          <ul>
+            <li>Exposed files</li>
+            <li>Open directories</li>
+            <li>Public admin paths</li>
+            <li>Email exposure</li>
+            <li>Technology fingerprints</li>
+            <li>Third-party services</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Tools -->
-    <section id="tools" class="section">
-        <div class="container">
-            <h2 class="section-title">Tools We Use</h2>
-            <p class="section-subtitle">Professional-grade open source tooling — results delivered with raw data</p>
-            <div class="tools-grid">
-                <div class="tool-category">
-                    <h4>🔍 Reconnaissance</h4>
-                    <ul>
-                        <li>theHarvester</li>
-                        <li>Amass</li>
-                        <li>Subfinder</li>
-                        <li>httpx</li>
-                    </ul>
-                </div>
-                <div class="tool-category">
-                    <h4>🛡️ Scanning</h4>
-                    <ul>
-                        <li>nmap</li>
-                        <li>Nuclei</li>
-                        <li>ffuf / Gobuster</li>
-                        <li>OWASP ZAP</li>
-                    </ul>
-                </div>
-                <div class="tool-category">
-                    <h4>🕵️ OSINT</h4>
-                    <ul>
-                        <li>Maigret</li>
-                        <li>Holehe</li>
-                        <li>Sherlock</li>
-                        <li>theHarvester</li>
-                    </ul>
-                </div>
-                <div class="tool-category">
-                    <h4>₿ Crypto Analysis</h4>
-                    <ul>
-                        <li>Etherscan</li>
-                        <li>Polymarket API</li>
-                        <li>Custom edge detector</li>
-                        <li>On-chain analytics</li>
-                    </ul>
-                </div>
-            </div>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">1</div>
+          <h3>Submit Your Website</h3>
+          <p>You confirm authorization and provide the domain.</p>
         </div>
-    </section>
+        <div class="service-card">
+          <div class="service-icon">2</div>
+          <h3>We Run the Audit</h3>
+          <p>We use professional-grade open-source tools and manual review.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">3</div>
+          <h3>You Receive the Report</h3>
+          <p>You get a plain-English summary, risk-ranked findings, recommended fixes, and raw scan data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Why Choose Us -->
-    <section id="why-us" class="section section-dark">
-        <div class="container">
-            <h2 class="section-title">Why Choose Us?</h2>
-            <div class="comparison-table">
-                <table>
-                    <tr>
-                        <th>Feature</th>
-                        <th>OSINT Security</th>
-                        <th>Traditional Firm</th>
-                    </tr>
-                    <tr>
-                        <td>Basic audit price</td>
-                        <td class="positive">$500</td>
-                        <td class="negative">$1,000+</td>
-                    </tr>
-                    <tr>
-                        <td>Delivery time</td>
-                        <td class="positive">24-48 hours</td>
-                        <td class="negative">1-2 weeks</td>
-                    </tr>
-                    <tr>
-                        <td>Raw data included</td>
-                        <td class="positive">✅ Yes (nmap, nuclei)</td>
-                        <td class="negative">❌ No</td>
-                    </tr>
-                    <tr>
-                        <td>Crypto expertise</td>
-                        <td class="positive">✅ Specialized</td>
-                        <td class="negative">❌ Generalist</td>
-                    </tr>
-                    <tr>
-                        <td>Polymarket edge</td>
-                        <td class="positive">✅ Included</td>
-                        <td class="negative">❌ Not offered</td>
-                    </tr>
-                </table>
-            </div>
+  <section class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Service Packages</h2>
+      <p class="section-subtitle">Choose the package that fits your needs</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🔍</div>
+          <h3>Basic Website Audit</h3>
+          <div class="price">$199</div>
+          <p class="best-for">Best for: Small business sites</p>
+          <ul>
+            <li>Homepage and core page scan</li>
+            <li>SSL/TLS check</li>
+            <li>Security header check</li>
+            <li>Basic CMS detection</li>
+            <li>Technical SEO overview</li>
+            <li>Public exposure review</li>
+            <li>PDF summary + raw scan data</li>
+          </ul>
+          <p class="turnaround">2–3 business days</p>
+          <a href="contact.html" class="btn btn-outline">Get My $199 Audit</a>
         </div>
-    </section>
+        <div class="service-card featured">
+          <div class="badge">MOST POPULAR</div>
+          <div class="service-icon">⚔️</div>
+          <h3>Audit + Basic Pentest</h3>
+          <div class="price">$499</div>
+          <p class="best-for">Best for: WordPress/ecommerce</p>
+          <ul>
+            <li>Everything in Basic, plus:</li>
+            <li>Deeper crawling</li>
+            <li>CMS/plugin exposure review</li>
+            <li>Common vulnerability scan</li>
+            <li>Login/admin exposure review</li>
+            <li>Forms and input review</li>
+            <li>Basic OWASP-style checks</li>
+            <li>Risk-ranked remediation report</li>
+            <li>Raw scan exports</li>
+          </ul>
+          <p class="turnaround">3–5 business days</p>
+          <a href="contact.html" class="btn btn-primary">Start Security Review</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🏢</div>
+          <h3>Multi-Site Audit</h3>
+          <div class="price">Custom</div>
+          <p class="best-for">Best for: Agencies/operators</p>
+          <ul>
+            <li>5–15 websites</li>
+            <li>Summary dashboard</li>
+            <li>Site-by-site findings</li>
+            <li>Raw data per domain</li>
+            <li>Priority remediation list</li>
+            <li>Optional white-label report</li>
+          </ul>
+          <p class="turnaround">5–10 business days</p>
+          <a href="contact.html" class="btn btn-outline">Request Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact" class="section section-dark">
-        <div class="container">
-            <h2 class="section-title">Get a Quote</h2>
-            <div class="contact-grid">
-                <div class="contact-form-wrapper">
-                    <p style="font-size:1.1rem;margin-bottom:1.5rem;color:#ccc;">Email us with your target domain, the package you want, and any specific concerns. We'll respond within 24 hours with a scope confirmation and invoice.</p>
-                    <a href="mailto:600589mbm@gmail.com?subject=Quote Request - OSINT Security&body=Name:%0ACompany:%0AService (Basic $500 / Standard $800 / Premium $1000+):%0ATarget domain/project:%0ASpecific concerns:" class="btn btn-primary btn-lg">📧 Request a Quote</a>
-                    <p style="margin-top:1rem;color:#888;font-size:0.9rem;">Opens your email client with a pre-filled template.</p>
-                </div>
-                <div class="contact-info">
-                    <h3>Contact</h3>
-                    <ul>
-                        <li>📧 600589mbm@gmail.com</li>
-                        <li>⚡ Response time: &lt; 24 hours</li>
-                    </ul>
-                    <div class="payment-methods">
-                        <h4>Payment Methods</h4>
-                        <p>💳 Stripe | 💰 PayPal | ₿ USDC/ETH</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">No Black Box Reports</h2>
+      <p class="section-subtitle">We include the raw scan output so you can see exactly what was checked and what was found. No vague summaries — you get the evidence.</p>
+      <div class="hero-cta" style="margin-top:30px;">
+        <a href="sample-report.html" class="btn btn-primary btn-lg">View Sample Report</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container footer-inner">
-            <div class="footer-brand">
-                <div class="logo">OSINT<span>Security</span></div>
-                <p>Professional penetration testing services.<br>Automated recon. Human review.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="#services">Website Audits</a></li>
-                    <li><a href="#services">Crypto Due Diligence</a></li>
-                    <li><a href="#services">Full Pentests</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="#sample">Sample Report</a></li>
-                    <li><a href="reports/sample-megaeth.html">MegaETH DD</a></li>
-                    <li><a href="https://github.com/600589mbm-beep/OSINTSecuritybusiness">GitHub</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Pentest Agreement</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-            </div>
+  <section class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Tools We Use</h2>
+      <p class="section-subtitle">Professional-grade open source tooling</p>
+      <div class="tools-grid">
+        <div class="tool-category">
+          <h4>SSL/TLS Scanners</h4>
+          <ul>
+            <li>SSLyze</li>
+            <li>testssl.sh</li>
+            <li>OpenSSL CLI</li>
+          </ul>
         </div>
-        <div class="container footer-bottom">
-            <p>&copy; 2026 OSINT Security Services. All rights reserved.</p>
+        <div class="tool-category">
+          <h4>Security Scanners</h4>
+          <ul>
+            <li>Nuclei</li>
+            <li>Nikto</li>
+            <li>OWASP ZAP</li>
+          </ul>
         </div>
-    </footer>
+        <div class="tool-category">
+          <h4>Web Crawlers</h4>
+          <ul>
+            <li>Katana</li>
+            <li>httpx</li>
+            <li>Subfinder</li>
+          </ul>
+        </div>
+        <div class="tool-category">
+          <h4>CMS Scanners</h4>
+          <ul>
+            <li>WPScan</li>
+            <li>WhatWeb</li>
+            <li>Wappalyzer CLI</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="report-preview" style="max-width:800px;margin:40px auto;">
+        <div class="report-findings">
+          <div class="faq-item"><strong>Is this a full penetration test?</strong><br>No. This is a basic website audit and light pentesting review focused on common issues, misconfigurations, and public exposure.</div>
+          <div class="faq-item"><strong>Do you need my login?</strong><br>Usually no. Most basic audits are performed from the outside, like a public visitor would see your website.</div>
+          <div class="faq-item"><strong>Will this break my website?</strong><br>The audit uses non-destructive methods. We do not attempt destructive exploitation.</div>
+          <div class="faq-item"><strong>What do I get?</strong><br>You receive a plain-English report and the raw data from the tools used.</div>
+        </div>
+        <div style="text-align:center;margin-top:30px;">
+          <a href="faq.html" class="btn btn-secondary">See All FAQs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Ready to know what your website is exposing?</h2>
+      <div class="hero-cta">
+        <a href="contact.html" class="btn btn-primary btn-lg">Get My Website Audit</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">abcore pro <span>security</span></div>
+        <p>Basic Website Audit & Pentesting.<br>Professional-grade open-source tooling. Raw data included.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Basic Website Audit</a></li>
+          <li><a href="services.html">Audit + Basic Pentest</a></li>
+          <li><a href="services.html">Multi-Site Audit</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="sample-report.html">Sample Report</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="https://github.com/600589mbm-beep/OSINTSecuritybusiness">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Authorization Agreement</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 abcore pro security. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
