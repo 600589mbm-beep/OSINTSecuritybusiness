@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top 10 Website Security Issues Small Businesses Ignore | abcore pro security</title>
+  <meta name="description" content="Discover the top 10 website security issues that small businesses overlook. Learn how to identify and fix common website vulnerabilities before attackers exploit them.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">abcore pro <span>security</span></div>
+      <ul class="nav-links">
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../pricing.html">Pricing</a></li>
+        <li><a href="../sample-report.html">Sample Report</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../contact.html" class="btn btn-outline">Start Audit</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top:120px;">
+    <div class="container" style="max-width:800px;">
+      <h1>Top 10 Website Security Issues Small Businesses Ignore</h1>
+      <p style="color:var(--gray-light);margin-bottom:30px;font-size:18px;">Most small business websites have security problems hiding in plain sight. Here are the 10 most common issues we find — and how to fix them.</p>
+
+      <div style="color:var(--gray);font-size:14px;margin-bottom:40px;">
+        <span>Published: May 8, 2026</span> &middot; <span>Reading time: 10 minutes</span>
+      </div>
+
+      <div style="color:var(--gray-light);line-height:1.8;font-size:17px;">
+
+        <p>Every week, we scan dozens of small business websites. The same issues come up again and again — not because business owners do not care about security, but because these problems are invisible to anyone who does not know where to look. Below are the ten most common <strong>website security issues</strong> we encounter, why they matter, and what you can do about them.</p>
+
+        <h2>1. Missing or Misconfigured Security Headers</h2>
+
+        <p>Security headers are one of the most overlooked aspects of <strong>small business website security</strong>. Headers like Content-Security-Policy, X-Frame-Options, X-Content-Type-Options, and Strict-Transport-Security tell browsers how to handle your website securely. Without them, your site is vulnerable to clickjacking, cross-site scripting, and MIME-type sniffing attacks.</p>
+
+        <p>We frequently find websites with zero security headers configured. The fix is straightforward — add the appropriate headers at the server or CDN level. Our <a href="why-security-headers-matter.html" style="color:var(--primary);">guide to security headers</a> explains each one in detail.</p>
+
+        <h2>2. Expired or Misconfigured SSL/TLS Certificates</h2>
+
+        <p>An SSL certificate is not a "set it and forget it" solution. Certificates expire, configurations drift, and what was considered strong encryption two years ago may now be weak. We commonly find certificates that are valid but configured to support outdated TLS versions (TLS 1.0 or 1.1) or weak cipher suites that can be broken by modern attacks.</p>
+
+        <p>A proper <a href="ssl-tls-website-security.html" style="color:var(--primary);">SSL/TLS configuration check</a> should verify not just certificate validity, but also the entire encryption chain.</p>
+
+        <h2>3. Outdated WordPress Core, Themes, and Plugins</h2>
+
+        <p>This is perhaps the single most common entry point for attackers. WordPress powers over 40% of the web, and its popularity makes it a prime target. When a vulnerability is discovered in a popular plugin, attackers develop automated scripts to exploit it within hours. If your WordPress site is not updated promptly, it becomes part of the attack surface.</p>
+
+        <p>We recommend enabling automatic updates for minor WordPress core releases and reviewing plugins monthly. Our <a href="wordpress-security-risks.html" style="color:var(--primary);">WordPress security guide</a> covers this in depth.</p>
+
+        <h2>4. Exposed Sensitive Files</h2>
+
+        <p>Many websites inadvertently expose files that should never be publicly accessible. Common examples include .git directories, backup files (.bak, .old, .sql), configuration files (wp-config.php.bak, .env), and log files. These files can reveal database credentials, API keys, and internal file paths.</p>
+
+        <p>We use tools like Nikto and manual inspection to check for these exposures. The fix typically involves proper server configuration to block access to sensitive paths and ensuring backups are stored outside the web root.</p>
+
+        <h2>5. Directory Listing Enabled</h2>
+
+        <p>When directory listing is enabled on a web server, anyone can browse the contents of folders that do not have an index file (like index.html or index.php). This can expose file structures, backup directories, upload folders, and other sensitive information. Disabling directory listing is a simple server configuration change that eliminates this risk entirely.</p>
+
+        <h2>6. Weak or Default Admin Credentials</h2>
+
+        <p>Many small business websites still use "admin" as the username with a weak password. Even if you think your login page is hidden, attackers use automated tools to find admin panels and attempt credential stuffing attacks using leaked password databases. We often find WordPress sites with the default /wp-admin path and no rate limiting or brute force protection in place.</p>
+
+        <h2>7. No Rate Limiting on Login Forms</h2>
+
+        <p>Speaking of brute force attacks, the lack of rate limiting on login forms is a critical vulnerability. Without rate limiting, an attacker can automate thousands of password attempts against your login page. Implementing rate limiting, account lockout policies, or CAPTCHA on login forms is essential for any site with user accounts.</p>
+
+        <h2>8. Information Disclosure via Server Headers</h2>
+
+        <p>By default, many web servers announce their version numbers in HTTP response headers. A header like "Server: Apache/2.4.29" or "X-Powered-By: PHP/7.2.10" tells attackers exactly what version of server software you are running, allowing them to look up known vulnerabilities for that specific version. Hiding or minimizing these headers is a simple but effective security measure.</p>
+
+        <h2>9. Missing or Weak Content Security Policy</h2>
+
+        <p>A Content Security Policy (CSP) is your website's defense against cross-site scripting (XSS) attacks. Without a CSP, an attacker who manages to inject a script into your page can execute arbitrary JavaScript in your visitors' browsers — potentially stealing session cookies, redirecting users to malicious sites, or defacing your page. Implementing a CSP requires careful planning but provides significant protection against client-side attacks.</p>
+
+        <h2>10. No Regular Vulnerability Scanning</h2>
+
+        <p>The final and perhaps most fundamental issue is the lack of regular security reviews. Many small business owners set up their website and never revisit security. New vulnerabilities are discovered constantly — what was secure six months ago may not be secure today. Regular <a href="vulnerability-scan-explained.html" style="color:var(--primary);">vulnerability scanning</a> catches these issues before they become exploitable.</p>
+
+        <h2>How to Address These Issues</h2>
+
+        <p>The good news is that most of these <strong>common website vulnerabilities</strong> are straightforward to fix once you know they exist. The challenge is discovery. You cannot fix what you do not know is broken.</p>
+
+        <p>Our <a href="../services.html" style="color:var(--primary);">basic website audit</a> checks for all ten of these issues plus many more. You receive a risk-ranked report that tells you exactly what to fix first, along with the raw scan data so you can verify our findings yourself.</p>
+
+        <p>For WordPress sites, we also offer a focused <a href="common-wordpress-mistakes.html" style="color:var(--primary);">WordPress security checklist</a> that addresses the CMS-specific issues that generic scans might miss.</p>
+
+        <h2>Prevention Is Always Cheaper Than Recovery</h2>
+
+        <p>A compromised website can cost thousands of dollars in cleanup, lost revenue, damaged reputation, and potential legal liability. A $199 security audit is a fraction of that cost — and it gives you the knowledge you need to protect your business proactively rather than reactively.</p>
+
+      </div>
+
+      <div style="margin:50px 0;text-align:center;">
+        <h3 style="margin-bottom:20px;">Find These Issues on Your Website</h3>
+        <p style="color:var(--gray-light);margin-bottom:30px;">Get a comprehensive audit with risk-ranked findings and raw scan data.</p>
+        <a href="../contact.html" class="btn btn-primary btn-lg">Get My Website Audit</a>
+        <a href="../pricing.html" class="btn btn-outline btn-lg" style="margin-left:15px;">View Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">abcore pro <span>security</span></div>
+        <p>Basic Website Audit & Pentesting.<br>Professional-grade open-source tooling. Raw data included.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../services.html">Basic Website Audit</a></li>
+          <li><a href="../services.html">Audit + Basic Pentest</a></li>
+          <li><a href="../services.html">Multi-Site Audit</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../sample-report.html">Sample Report</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="https://github.com/600589mbm-beep/OSINTSecuritybusiness">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Authorization Agreement</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 abcore pro security. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

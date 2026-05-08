@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSL/TLS Website Security Explained for Business Owners | abcore pro security</title>
+  <meta name="description" content="Understand SSL/TLS website security, certificate audits, and TLS configuration. A business-friendly guide to securing your site's encryption.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">abcore pro <span>security</span></div>
+      <ul class="nav-links">
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../pricing.html">Pricing</a></li>
+        <li><a href="../sample-report.html">Sample Report</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../contact.html" class="btn btn-outline">Start Audit</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top:120px;">
+    <div class="container" style="max-width:800px;">
+      <h1>SSL/TLS Website Security Explained for Business Owners</h1>
+      <p style="color:var(--gray-light);margin-bottom:30px;font-size:18px;">What every business owner needs to know about SSL certificates, TLS configuration, and encryption — without the technical jargon.</p>
+
+      <div style="color:var(--gray);font-size:14px;margin-bottom:40px;">
+        <span>Published: May 8, 2026</span> &middot; <span>Reading time: 9 minutes</span>
+      </div>
+
+      <div style="color:var(--gray-light);line-height:1.8;font-size:17px;">
+
+        <p>You have probably heard that your website needs an SSL certificate. You may even have one installed. But there is a big difference between having a certificate and having proper <strong>SSL/TLS website security</strong>. Many business owners install a certificate and never look at it again — not realizing that their encryption settings may be weak, misconfigured, or about to expire.</p>
+
+        <h2>What Are SSL and TLS?</h2>
+
+        <p>SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are protocols that encrypt the connection between a visitor's browser and your web server. When someone visits your website, SSL/TLS ensures that the data exchanged — including form submissions, login credentials, and browsing activity — cannot be read by anyone intercepting the connection.</p>
+
+        <p>Technically, SSL is the older protocol and has been replaced by TLS. But the term "SSL certificate" is still widely used even though modern certificates actually use TLS. When we talk about an <strong>SSL security check</strong>, we are really talking about verifying that your TLS configuration is secure.</p>
+
+        <h2>Why SSL/TLS Matters for Business Owners</h2>
+
+        <p>Beyond the obvious security benefits, SSL/TLS affects your business in several ways:</p>
+
+        <ul style="margin:20px 0 20px 40px;color:var(--gray-light);">
+          <li style="padding:6px 0;"><strong>Browser warnings:</strong> Chrome, Safari, and Firefox now display "Not Secure" warnings for sites without HTTPS. This instantly erodes visitor trust.</li>
+          <li style="padding:6px 0;"><strong>SEO rankings:</strong> Google uses HTTPS as a ranking signal. Sites with proper SSL/TLS may rank higher than identical sites without it.</li>
+          <li style="padding:6px 0;"><strong>Compliance:</strong> PCI-DSS (for payment processing), HIPAA, and GDPR all require encrypted connections for sensitive data.</li>
+          <li style="padding:6px 0;"><strong>Data protection:</strong> Login credentials, contact form data, and customer information are encrypted in transit.</li>
+        </ul>
+
+        <h2>Common SSL/TLS Problems We Find</h2>
+
+        <h3>1. Expired Certificates</h3>
+        <p>It sounds basic, but expired certificates are still a leading cause of website outages and browser warnings. Let's Encrypt certificates expire after 90 days. If your auto-renewal fails for any reason, your certificate expires and your site shows security warnings to every visitor. An <strong>SSL certificate audit</strong> catches this before it becomes a problem.</p>
+
+        <h3>2. Weak TLS Configuration</h3>
+        <p>Having a valid certificate is not enough if your server supports outdated and insecure protocols. TLS 1.0 and TLS 1.1 are now considered insecure and should be disabled. TLS 1.2 should be the minimum, with TLS 1.3 preferred for modern browsers. We frequently find servers that still allow TLS 1.0 connections, leaving them vulnerable to downgrade attacks.</p>
+
+        <h3>3. Weak Cipher Suites</h3>
+        <p>Cipher suites are the algorithms used to encrypt the connection. Some older cipher suites have known vulnerabilities (like RC4) or use inadequate key lengths. A proper <strong>TLS configuration</strong> uses only strong, modern cipher suites. Our audits check every cipher your server offers and flags the weak ones.</p>
+
+        <h3>4. Certificate Chain Issues</h3>
+        <p>An SSL certificate is part of a chain — your site certificate is signed by an intermediate certificate, which is signed by a root certificate. If your server is not configured to serve the complete chain, some browsers and devices may not trust your certificate. This is a common misconfiguration that causes intermittent errors on mobile devices and older systems.</p>
+
+        <h3>5. Mixed Content</h3>
+        <p>Mixed content occurs when your HTTPS page loads some resources (images, scripts, stylesheets) over HTTP. Browsers will block some of these resources or display warnings, breaking your page and eroding trust. This often happens after migrating a site from HTTP to HTTPS without updating all internal links.</p>
+
+        <h3>6. Missing HSTS (HTTP Strict Transport Security)</h3>
+        <p>Even with a valid certificate, visitors who type "yourwebsite.com" (without HTTPS) are initially connected over HTTP before being redirected. This brief HTTP connection is an opportunity for a man-in-the-middle attack. HSTS tells browsers to connect only over HTTPS, eliminating this window of vulnerability.</p>
+
+        <h2>How We Test SSL/TLS Security</h2>
+
+        <p>Our <a href="../services.html" style="color:var(--primary);">website audits</a> use SSLyze and testssl.sh to perform deep TLS analysis. These tools check:</p>
+
+        <ul style="margin:20px 0 20px 40px;color:var(--gray-light);">
+          <li style="padding:6px 0;">Certificate validity, expiry date, and chain completeness</li>
+          <li style="padding:6px 0;">Supported TLS versions and which ones should be disabled</li>
+          <li style="padding:6px 0;">Cipher suite strength and which ones are vulnerable</li>
+          <li style="padding:6px 0;">HSTS configuration and max-age value</li>
+          <li style="padding:6px 0;">Certificate Transparency log presence</li>
+          <li style="padding:6px 0;">OCSP stapling configuration</li>
+        </ul>
+
+        <p>The raw scan data from these tools is included in your audit report, so you can see exactly what a browser sees when it connects to your site.</p>
+
+        <h2>What Is a Good TLS Configuration?</h2>
+
+        <p>A well-configured TLS setup in 2026 should:</p>
+
+        <ul style="margin:20px 0 20px 40px;color:var(--gray-light);">
+          <li style="padding:6px 0;">Support only TLS 1.2 and TLS 1.3 (disable TLS 1.0 and 1.1)</li>
+          <li style="padding:6px 0;">Prefer TLS 1.3 ciphers where supported</li>
+          <li style="padding:6px 0;">Use a certificate from a trusted Certificate Authority</li>
+          <li style="padding:6px 0;">Have HSTS enabled with a max-age of at least one year</li>
+          <li style="padding:6px 0;">Serve the complete certificate chain</li>
+          <li style="padding:6px 0;">Have OCSP stapling enabled for improved performance and privacy</li>
+        </ul>
+
+        <h2>Do Not Assume Your SSL Is Fine</h2>
+
+        <p>The majority of small business websites we scan have at least one SSL/TLS issue. Often it is something the site owner did not even know to check — like a weak cipher suite or a missing intermediate certificate. A proper <a href="../pricing.html" style="color:var(--primary);">SSL certificate audit</a> gives you the complete picture.</p>
+
+        <p>Remember: a padlock icon in the browser address bar only means the certificate is valid. It does not mean the encryption is strong, the configuration is secure, or the certificate will not expire next week.</p>
+
+        <p><a href="../contact.html" style="color:var(--primary);">Order your audit today</a> and get the full TLS analysis with raw data included.</p>
+
+      </div>
+
+      <div style="margin:50px 0;text-align:center;">
+        <h3 style="margin-bottom:20px;">Check Your SSL/TLS Security</h3>
+        <p style="color:var(--gray-light);margin-bottom:30px;">Get a comprehensive SSL/TLS audit with raw scan data included.</p>
+        <a href="../contact.html" class="btn btn-primary btn-lg">Start SSL Audit</a>
+        <a href="../sample-report.html" class="btn btn-outline btn-lg" style="margin-left:15px;">View Sample Report</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">abcore pro <span>security</span></div>
+        <p>Basic Website Audit & Pentesting.<br>Professional-grade open-source tooling. Raw data included.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../services.html">Basic Website Audit</a></li>
+          <li><a href="../services.html">Audit + Basic Pentest</a></li>
+          <li><a href="../services.html">Multi-Site Audit</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../sample-report.html">Sample Report</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="https://github.com/600589mbm-beep/OSINTSecuritybusiness">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Authorization Agreement</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 abcore pro security. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

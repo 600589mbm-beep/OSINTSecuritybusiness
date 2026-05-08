@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Security Headers Matter for Your Website | abcore pro security</title>
+  <meta name="description" content="Learn why HTTP security headers are critical for website security. A comprehensive guide to security headers audit and implementation for business owners.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">abcore pro <span>security</span></div>
+      <ul class="nav-links">
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../pricing.html">Pricing</a></li>
+        <li><a href="../sample-report.html">Sample Report</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../contact.html" class="btn btn-outline">Start Audit</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top:120px;">
+    <div class="container" style="max-width:800px;">
+      <h1>Why Security Headers Matter for Your Website</h1>
+      <p style="color:var(--gray-light);margin-bottom:30px;font-size:18px;">HTTP security headers are your website's first line of defense. Learn what they are, which ones you need, and how a security headers audit protects your visitors.</p>
+
+      <div style="color:var(--gray);font-size:14px;margin-bottom:40px;">
+        <span>Published: May 8, 2026</span> &middot; <span>Reading time: 9 minutes</span>
+      </div>
+
+      <div style="color:var(--gray-light);line-height:1.8;font-size:17px;">
+
+        <p>When you visit a website, your browser receives more than just the HTML, CSS, and images that make up the page. The web server also sends HTTP headers — metadata that tells your browser how to handle the connection, how to render the content, and what security policies to enforce. These headers are invisible to most users, but they play a critical role in protecting both your website and your visitors.</p>
+
+        <p>A <strong>security headers audit</strong> checks whether your website is sending the right headers with every response. Surprisingly, the vast majority of small business websites either send no security headers at all or implement them incorrectly. This leaves the site vulnerable to several classes of attacks that are trivially easy to prevent.</p>
+
+        <h2>What Are HTTP Security Headers?</h2>
+
+        <p>HTTP security headers are response headers that instruct the browser to enable specific security protections. They are part of the HTTP response your server sends before the actual page content. Because they are set at the server level, they require no changes to your website code and provide protection for every visitor, regardless of their device or browser.</p>
+
+        <h2>The Essential Security Headers</h2>
+
+        <h3>1. Strict-Transport-Security (HSTS)</h3>
+        <p>The HSTS header forces browsers to connect to your website only over HTTPS, even if the user types "http://" in the address bar. This prevents man-in-the-middle attacks where an attacker intercepts the initial HTTP connection and steals sensitive data before the browser redirects to HTTPS. A typical HSTS header looks like: <code style="background:rgba(123,97,255,0.2);padding:2px 6px;border-radius:4px;font-size:14px;">Strict-Transport-Security: max-age=31536000; includeSubDomains</code></p>
+
+        <p>Without HSTS, a visitor connecting from a coffee shop WiFi network could have their traffic intercepted before the HTTPS redirect happens. With HSTS, the browser remembers to use HTTPS exclusively for the specified duration (in this case, one year).</p>
+
+        <h3>2. Content-Security-Policy (CSP)</h3>
+        <p>CSP is the most powerful security header and also the most complex to configure correctly. It defines which sources of content are allowed to be loaded and executed on your page. This includes scripts, stylesheets, images, fonts, and data connections. A properly configured CSP can prevent cross-site scripting (XSS) attacks even if an attacker manages to inject malicious code into your page.</p>
+
+        <p>For example, a CSP that only allows scripts from your own domain and a trusted CDN would block any attacker-injected script from an unknown source. The trade-off is that CSP requires careful configuration — a too-restrictive policy can break legitimate functionality on your site.</p>
+
+        <h3>3. X-Frame-Options</h3>
+        <p>This header prevents your website from being embedded in an iframe on another site. Without it, attackers can perform clickjacking attacks — loading your site in an invisible iframe and tricking users into clicking buttons or links they cannot see. The recommended value is <code style="background:rgba(123,97,255,0.2);padding:2px 6px;border-radius:4px;font-size:14px;">X-Frame-Options: DENY</code> or <code style="background:rgba(123,97,255,0.2);padding:2px 6px;border-radius:4px;font-size:14px;">SAMEORIGIN</code>.</p>
+
+        <h3>4. X-Content-Type-Options</h3>
+        <p>This header prevents browsers from MIME-sniffing — that is, trying to guess the content type of a response instead of trusting what the server says. Without it, an attacker might upload a malicious script with an image file extension, and a browser that MIME-sniffs could execute it as a script. The fix is simple: <code style="background:rgba(123,97,255,0.2);padding:2px 6px;border-radius:4px;font-size:14px;">X-Content-Type-Options: nosniff</code>.</p>
+
+        <h3>5. Referrer-Policy</h3>
+        <p>The Referrer-Policy header controls how much information your site sends to other sites when a visitor clicks a link. Without a policy, the full URL (including potentially sensitive query parameters) is sent as a referrer. A policy of <code style="background:rgba(123,97,255,0.2);padding:2px 6px;border-radius:4px;font-size:14px;">strict-origin-when-cross-origin</code> provides a good balance of privacy and functionality.</p>
+
+        <h3>6. Permissions-Policy (formerly Feature-Policy)</h3>
+        <p>This header allows you to control which browser features and APIs your site can use — things like camera, microphone, geolocation, and notifications. By restricting features your site does not need, you reduce the attack surface available to malicious code.</p>
+
+        <h2>How to Check Your Security Headers</h2>
+
+        <p>You can check your current <strong>website security headers</strong> using free online tools like SecurityHeaders.com (by Scott Helme) or by inspecting the network tab in your browser's developer tools. Look at the response headers for your homepage and see which of the above headers are present.</p>
+
+        <p>However, manual checking only tells you the current state. A professional <a href="../services.html" style="color:var(--primary);">website audit</a> checks headers across multiple pages, evaluates the strength of your CSP if one exists, and provides specific recommendations for improvement.</p>
+
+        <h2>Common Mistakes with Security Headers</h2>
+
+        <p>Even when site owners add security headers, we frequently find implementation mistakes:</p>
+
+        <ul style="margin:20px 0 20px 40px;color:var(--gray-light);">
+          <li style="padding:6px 0;">CSP set to "unsafe-inline" which negates most of its protection</li>
+          <li style="padding:6px 0;">HSTS with a very short max-age that provides minimal protection</li>
+          <li style="padding:6px 0;">X-Frame-Options set to ALLOW-FROM with a typo in the domain</li>
+          <li style="padding:6px 0;">Headers added only on the homepage but missing on subpages</li>
+          <li style="padding:6px 0;">Conflicting policies that cancel each other out</li>
+        </ul>
+
+        <h2>The Business Case for Security Headers</h2>
+
+        <p>Beyond the security benefits, proper security headers also contribute to trust signals. Some browsers display warnings for sites with poor security postures. Google considers security as a ranking factor. And if you process payments or handle sensitive data, certain compliance frameworks require specific security headers.</p>
+
+        <p>Most importantly, security headers are free. Once configured, they require no maintenance and provide ongoing protection. There is no reason not to implement them correctly.</p>
+
+        <h2>Getting a Professional Security Headers Audit</h2>
+
+        <p>Our <a href="../pricing.html" style="color:var(--primary);">basic audit package</a> includes a thorough review of all HTTP security headers across your website. We check not just presence but correctness — evaluating your CSP for gaps, verifying HSTS is properly configured, and identifying any conflicting headers.</p>
+
+        <p>You receive specific, actionable recommendations for each header, prioritized by security impact. And because we include raw scan data from tools like testssl.sh and SSLyze, you can see exactly what a browser sees when it connects to your site.</p>
+
+        <p>Do not let missing security headers be the weak link in your website security. <a href="../contact.html" style="color:var(--primary);">Order your audit today</a> and get the complete picture.</p>
+
+      </div>
+
+      <div style="margin:50px 0;text-align:center;">
+        <h3 style="margin-bottom:20px;">Get a Security Headers Audit</h3>
+        <p style="color:var(--gray-light);margin-bottom:30px;">Find out which security headers your website is missing.</p>
+        <a href="../contact.html" class="btn btn-primary btn-lg">Start My Audit</a>
+        <a href="../sample-report.html" class="btn btn-outline btn-lg" style="margin-left:15px;">See Sample Report</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">abcore pro <span>security</span></div>
+        <p>Basic Website Audit & Pentesting.<br>Professional-grade open-source tooling. Raw data included.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../services.html">Basic Website Audit</a></li>
+          <li><a href="../services.html">Audit + Basic Pentest</a></li>
+          <li><a href="../services.html">Multi-Site Audit</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../sample-report.html">Sample Report</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="https://github.com/600589mbm-beep/OSINTSecuritybusiness">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Authorization Agreement</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 abcore pro security. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

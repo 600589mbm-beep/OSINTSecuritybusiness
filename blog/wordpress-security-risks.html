@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Know If Your WordPress Website Is Exposing Risk | abcore pro security</title>
+  <meta name="description" content="Learn the warning signs that your WordPress website is exposing security risks. A comprehensive WordPress security audit guide for site owners.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">abcore pro <span>security</span></div>
+      <ul class="nav-links">
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../pricing.html">Pricing</a></li>
+        <li><a href="../sample-report.html">Sample Report</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../contact.html" class="btn btn-outline">Start Audit</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top:120px;">
+    <div class="container" style="max-width:800px;">
+      <h1>How to Know If Your WordPress Website Is Exposing Risk</h1>
+      <p style="color:var(--gray-light);margin-bottom:30px;font-size:18px;">WordPress powers 40% of the web, making it a prime target. Here is how to tell if your site is exposing security risks.</p>
+
+      <div style="color:var(--gray);font-size:14px;margin-bottom:40px;">
+        <span>Published: May 8, 2026</span> &middot; <span>Reading time: 10 minutes</span>
+      </div>
+
+      <div style="color:var(--gray-light);line-height:1.8;font-size:17px;">
+
+        <p>WordPress is the most popular content management system in the world, powering everything from small business websites to major news outlets. That popularity comes with a cost: WordPress is the most frequently attacked CMS on the internet. Automated bots scan for WordPress sites constantly, looking for known vulnerabilities in outdated cores, themes, and plugins.</p>
+
+        <p>A <strong>WordPress security audit</strong> can tell you exactly what risks your site is exposing. But before you order an audit, there are warning signs you can check yourself. Here is what to look for.</p>
+
+        <h2>Check Your WordPress Version Visibility</h2>
+
+        <p>By default, many WordPress sites reveal their version number in the HTML source code, in RSS feeds, and through the generator tag. This makes it trivial for attackers to determine if you are running a version with known vulnerabilities. Visit your homepage, view the page source, and search for "WordPress" or "generator." If you see a version number, your site is advertising its software version to every visitor — including attackers.</p>
+
+        <p>A proper <strong>WordPress vulnerability scan</strong> checks not just the version number but whether that specific version has published CVEs (Common Vulnerabilities and Exposures) associated with it.</p>
+
+        <h2>Audit Your Plugins and Themes</h2>
+
+        <p>Plugins and themes are the most common attack vector for WordPress sites. In 2025 alone, thousands of WordPress vulnerabilities were disclosed in plugins — many of them in popular plugins with millions of installations. The problem is not just outdated plugins; even current versions of plugins can have undisclosed vulnerabilities.</p>
+
+        <p>Log into your WordPress admin and check the Plugins page. Any plugin showing an update available is a potential security risk. But the bigger issue is often plugins that have not been updated by their developers in months or years — these are effectively abandoned and may contain unpatched security holes.</p>
+
+        <p>Our <a href="../services.html" style="color:var(--primary);">WordPress/CMS review</a> uses WPScan, the industry-standard WordPress security scanner, to identify vulnerable plugins, outdated themes, and exposed version information.</p>
+
+        <h2>Is Your Login Page Publicly Accessible?</h2>
+
+        <p>Every WordPress site has a login page at /wp-login.php or /wp-admin/. If these paths are accessible to the public internet without any restriction, attackers can attempt brute force attacks — trying thousands of password combinations until they find the right one. Worse, just knowing the login page exists confirms to an attacker that you are running WordPress.</p>
+
+        <p>Signs your login page is exposing risk:</p>
+        <ul style="margin:20px 0 20px 40px;color:var(--gray-light);">
+          <li style="padding:6px 0;">The /wp-login.php path returns a 200 OK response to anyone</li>
+          <li style="padding:6px 0;">There is no CAPTCHA or rate limiting on login attempts</li>
+          <li style="padding:6px 0;">You still use "admin" as a username</li>
+          <li style="padding:6px 0;">You have no two-factor authentication enabled</li>
+          <li style="padding:6px 0;">The login page is the default WordPress design (reveals version info)</li>
+        </ul>
+
+        <h2>Check for XML-RPC Exposure</h2>
+
+        <p>XML-RPC is a feature in WordPress that allows external services to connect to your site. While it has legitimate uses (like connecting mobile apps), it is also a common attack vector. Attackers can use XML-RPC to perform brute force attacks more efficiently than through the standard login page, because XML-RPC allows multiple authentication attempts in a single request.</p>
+
+        <p>If your site does not need XML-RPC (most small business sites do not), it should be disabled. You can check by sending a POST request to /xmlrpc.php — if you get a response other than 403 Forbidden or 404 Not Found, it may be enabled.</p>
+
+        <h2>Exposed Usernames and User Enumeration</h2>
+
+        <p>WordPress sites can leak usernames in several ways. The author archive pages (like /?author=1) often reveal the username associated with user ID 1 (typically the administrator). REST API endpoints can also expose username information. Once an attacker knows a valid username, they only need to crack the password.</p>
+
+        <p>A proper <strong>WordPress security risk</strong> assessment checks for all these enumeration vectors and tells you which ones need to be closed.</p>
+
+        <h2>File Editor and Upload Risks</h2>
+
+        <p>By default, WordPress allows administrators to edit theme and plugin files directly from the admin panel. This is convenient but dangerous — if an attacker gains admin access, they can inject malicious code into your theme files without needing FTP or server access. Similarly, if your site allows file uploads (through forms or plugins), these upload handlers need to be properly secured to prevent attackers from uploading malicious PHP files.</p>
+
+        <h2>Database Security and Table Prefixes</h2>
+
+        <p>Many WordPress installations still use the default "wp_" table prefix. This is well-known and makes SQL injection attacks easier to execute because the attacker already knows the table names. A secure WordPress installation uses a custom table prefix that is not easily guessable.</p>
+
+        <h2>How a Professional WordPress Security Audit Works</h2>
+
+        <p>When we perform a <a href="../pricing.html" style="color:var(--primary);">WordPress security audit</a>, we use a combination of automated and manual techniques:</p>
+
+        <ul style="margin:20px 0 20px 40px;color:var(--gray-light);">
+          <li style="padding:6px 0;">WPScan to identify vulnerable plugins, themes, and core version</li>
+          <li style="padding:6px 0;">Nikto to check for server-level misconfigurations</li>
+          <li style="padding:6px 0;">Manual review of login page exposure and hardening status</li>
+          <li style="padding:6px 0;">Check for exposed configuration files and backup files</li>
+          <li style="padding:6px 0;">Review of public information that reveals site structure</li>
+        </ul>
+
+        <p>Our <a href="common-wordpress-mistakes.html" style="color:var(--primary);">WordPress security checklist</a> goes into more detail on the specific items we check during an audit.</p>
+
+        <h2>Do Not Wait for a Breach</h2>
+
+        <p>The majority of WordPress hacks are not targeted attacks against specific sites. They are automated scans that exploit known vulnerabilities in outdated software. If your site is running vulnerable code, it is not a matter of "if" you will be found — it is a matter of when.</p>
+
+        <p>A $199 <a href="../contact.html" style="color:var(--primary);">basic audit</a> can identify these risks before they are exploited. And because we include raw scan data from WPScan and other tools, you can verify every finding yourself.</p>
+
+      </div>
+
+      <div style="margin:50px 0;text-align:center;">
+        <h3 style="margin-bottom:20px;">Secure Your WordPress Site Today</h3>
+        <p style="color:var(--gray-light);margin-bottom:30px;">Get a WordPress security audit with raw scan data and actionable fixes.</p>
+        <a href="../contact.html" class="btn btn-primary btn-lg">Start WordPress Audit</a>
+        <a href="../pricing.html" class="btn btn-outline btn-lg" style="margin-left:15px;">View Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">abcore pro <span>security</span></div>
+        <p>Basic Website Audit & Pentesting.<br>Professional-grade open-source tooling. Raw data included.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../services.html">Basic Website Audit</a></li>
+          <li><a href="../services.html">Audit + Basic Pentest</a></li>
+          <li><a href="../services.html">Multi-Site Audit</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../sample-report.html">Sample Report</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="https://github.com/600589mbm-beep/OSINTSecuritybusiness">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Authorization Agreement</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 abcore pro security. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

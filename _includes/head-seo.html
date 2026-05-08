@@ -1,0 +1,45 @@
+<!-- Open Graph -->
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.description }}">
+<meta property="og:url" content="https://abcorepro.com{{ page.url }}">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://abcorepro.com/favicon.svg">
+<meta property="og:site_name" content="abcore pro security">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ page.description }}">
+<meta name="twitter:image" content="https://abcorepro.com/favicon.svg">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://abcorepro.com{{ page.url }}">
+
+<!-- JSON-LD: Organization (shared) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "abcore pro security",
+  "url": "https://abcorepro.com",
+  "logo": "https://abcorepro.com/favicon.svg",
+  "sameAs": [
+    "https://github.com/600589mbm-beep/OSINTSecuritybusiness"
+  ]
+}
+</script>
+
+<!-- JSON-LD: WebSite with search action (shared) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "abcore pro security",
+  "url": "https://abcorepro.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://abcorepro.com{{ page.url }}?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>

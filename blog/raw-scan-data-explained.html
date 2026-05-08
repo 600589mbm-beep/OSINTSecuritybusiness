@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Raw Scan Data Means in a Website Audit | abcore pro security</title>
+  <meta name="description" content="Understand what raw scan data means in a website audit. Learn why open source pentesting tools data matters and how transparent reporting gives you real security insights.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">abcore pro <span>security</span></div>
+      <ul class="nav-links">
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../pricing.html">Pricing</a></li>
+        <li><a href="../sample-report.html">Sample Report</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../contact.html" class="btn btn-outline">Start Audit</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top:120px;">
+    <div class="container" style="max-width:800px;">
+      <h1>What Raw Scan Data Means in a Website Audit</h1>
+      <p style="color:var(--gray-light);margin-bottom:30px;font-size:18px;">Why transparent security reporting with raw scan data matters — and how open source pentesting tools give you verifiable results.</p>
+
+      <div style="color:var(--gray);font-size:14px;margin-bottom:40px;">
+        <span>Published: May 8, 2026</span> &middot; <span>Reading time: 8 minutes</span>
+      </div>
+
+      <div style="color:var(--gray-light);line-height:1.8;font-size:17px;">
+
+        <p>Most website security services give you a polished PDF report with colorful charts, risk scores, and vague recommendations. What they do not give you is the raw data — the actual output from the scanning tools that found the issues. At abcore pro security, we take a different approach. Every audit includes the <strong>raw scan data</strong> alongside our plain-English summary. Here is why that matters.</p>
+
+        <h2>What Is Raw Scan Data?</h2>
+
+        <p>Raw scan data is the unedited, unsummarized output produced by the security tools we use to scan your website. When we run SSLyze against your domain, the raw data is the complete SSL/TLS analysis output. When we run Nuclei vulnerability scanner, the raw data is the full list of scan results, including timestamps, request details, and matched templates. When we use OWASP ZAP, the raw data includes the complete spider and active scan logs.</p>
+
+        <p>This <strong>website audit raw data</strong> is what the tools actually saw, not what a consultant decided to highlight in a summary. It gives you the ability to verify findings, understand the scope of the scan, and keep a permanent record of your website's security state at a point in time.</p>
+
+        <h2>Why Most Providers Hide Raw Data</h2>
+
+        <p>There are three common reasons security audit providers do not share raw data:</p>
+
+        <ol style="margin:20px 0 20px 40px;color:var(--gray-light);">
+          <li style="padding:6px 0;"><strong>It exposes their methods.</strong> Some providers use proprietary tools or manual techniques they do not want to reveal. By sharing only a summary, they protect their "secret sauce."</li>
+          <li style="padding:6px 0;"><strong>It can be overwhelming.</strong> Raw scan output is technical, verbose, and not designed for non-expert consumption. Many providers worry that sharing it will confuse clients.</li>
+          <li style="padding:6px 0;"><strong>It reveals limitations.</strong> If a provider claims to do a "comprehensive" audit but the raw data shows they only scanned the homepage, the raw data exposes the gap between marketing and reality.</li>
+        </ol>
+
+        <p>We believe none of these reasons justify withholding data from the client who paid for the audit. You own the results. You should get the data.</p>
+
+        <h2>The Tools Behind the Data</h2>
+
+        <p>We use professional-grade <strong>open source pentesting tools</strong> because they are transparent, well-audited by the security community, and produce data you can verify independently. Here are the primary tools whose raw output you receive:</p>
+
+        <h3>SSLyze and testssl.sh</h3>
+        <p>These tools perform deep SSL/TLS analysis, checking certificate validity, supported protocols, cipher suites, and compliance with modern security standards. The raw output includes detailed information about each check, including the exact cipher strings offered by your server and which ones were accepted or rejected.</p>
+
+        <h3>Nuclei</h3>
+        <p>Nuclei is a fast, template-based vulnerability scanner. It checks your website against thousands of known vulnerability signatures. The raw data includes each template that was run, what was found, response codes, and fingerprints. This lets you see not just what vulnerabilities exist, but what was checked and ruled out.</p>
+
+        <h3>Nikto</h3>
+        <p>Nikto is a well-established web server scanner that checks for dangerous files, outdated server versions, and known vulnerabilities. Its raw output is comprehensive and includes every check performed, making it easy to verify the scan coverage.</p>
+
+        <h3>OWASP ZAP</h3>
+        <p>The OWASP Zed Attack Proxy performs automated security testing of web applications. Its raw data includes spider results (what URLs were discovered), active scan findings, and alert details with confidence levels and evidence snippets.</p>
+
+        <h3>WhatWeb</h3>
+        <p>WhatWeb identifies technologies used by websites — content management systems, JavaScript libraries, web servers, and embedded devices. The raw data shows exactly what technology signatures were matched and with what confidence level.</p>
+
+        <h2>How to Read Raw Scan Data</h2>
+
+        <p>You do not need to be a security expert to benefit from raw scan data. Here is what to look for:</p>
+
+        <ul style="margin:20px 0 20px 40px;color:var(--gray-light);">
+          <li style="padding:6px 0;"><strong>Timestamps:</strong> When was each scan performed? This establishes the baseline date for your security posture.</li>
+          <li style="padding:6px 0;"><strong>Scan scope:</strong> Which URLs were tested? A good scan covers more than just the homepage.</li>
+          <li style="padding:6px 0;"><strong>Findings with evidence:</strong> Each finding should include the specific request/response that triggered it, not just a generic warning.</li>
+          <li style="padding:6px 0;"><strong>False positives:</strong> Raw data helps you identify when a tool flagged something that is not actually a problem, allowing you to make informed decisions.</li>
+        </ul>
+
+        <h2>Why Raw Data Matters for Compliance and Due Diligence</h2>
+
+        <p>If your business needs to demonstrate security due diligence — for insurance purposes, client contracts, or regulatory compliance — a summary report is often insufficient. Raw scan data provides the evidence trail. You can prove not just that an audit was performed, but exactly what was checked and what the tools found.</p>
+
+        <p>Raw data also lets you track changes over time. By comparing raw scan output from different dates, you can measure whether your security posture is improving, staying steady, or degrading. This is especially valuable for businesses that undergo regular <a href="website-security-checklist.html" style="color:var(--primary);">security checklists</a> and reviews.</p>
+
+        <h2>The abcore pro security Approach</h2>
+
+        <p>Every audit we deliver includes:</p>
+
+        <ul style="margin:20px 0 20px 40px;color:var(--gray-light);">
+          <li style="padding:6px 0;">A plain-English PDF report with risk-ranked findings and recommendations</li>
+          <li style="padding:6px 0;">Raw output from every tool we used, organized by tool and scan type</li>
+          <li style="padding:6px 0;">A summary of what was scanned so you know the scope of the audit</li>
+          <li style="padding:6px 0;">No black boxes, no hidden methods, no vague summaries</li>
+        </ul>
+
+        <p>We believe transparency builds trust. When you <a href="../contact.html" style="color:var(--primary);">order an audit</a>, you are paying for the truth about your website's security — not a filtered version of it.</p>
+
+        <p>Want to see what this looks like in practice? <a href="../sample-report.html" style="color:var(--primary);">View our sample report</a> to see how we present both the summary and the raw data.</p>
+
+      </div>
+
+      <div style="margin:50px 0;text-align:center;">
+        <h3 style="margin-bottom:20px;">Get Your Audit with Raw Data Included</h3>
+        <p style="color:var(--gray-light);margin-bottom:30px;">No black boxes. No hidden data. Just clear findings and the evidence.</p>
+        <a href="../contact.html" class="btn btn-primary btn-lg">Get My Website Audit</a>
+        <a href="../sample-report.html" class="btn btn-outline btn-lg" style="margin-left:15px;">View Sample Report</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">abcore pro <span>security</span></div>
+        <p>Basic Website Audit & Pentesting.<br>Professional-grade open-source tooling. Raw data included.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../services.html">Basic Website Audit</a></li>
+          <li><a href="../services.html">Audit + Basic Pentest</a></li>
+          <li><a href="../services.html">Multi-Site Audit</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../sample-report.html">Sample Report</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="https://github.com/600589mbm-beep/OSINTSecuritybusiness">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Authorization Agreement</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 abcore pro security. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

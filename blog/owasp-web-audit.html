@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Is OWASP ZAP and Why Does It Matter? | abcore pro security</title>
+  <meta name="description" content="Learn what OWASP ZAP is, how it fits into an OWASP website audit, and why web application security testing matters for your business.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">abcore pro <span>security</span></div>
+      <ul class="nav-links">
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../pricing.html">Pricing</a></li>
+        <li><a href="../sample-report.html">Sample Report</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../contact.html" class="btn btn-outline">Start Audit</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top:120px;">
+    <div class="container" style="max-width:800px;">
+      <h1>What Is OWASP ZAP and Why Does It Matter?</h1>
+      <p style="color:var(--gray-light);margin-bottom:30px;font-size:18px;">Understanding OWASP ZAP and how it fits into professional web application security testing for your website.</p>
+
+      <div style="color:var(--gray);font-size:14px;margin-bottom:40px;">
+        <span>Published: May 8, 2026</span> &middot; <span>Reading time: 8 minutes</span>
+      </div>
+
+      <div style="color:var(--gray-light);line-height:1.8;font-size:17px;">
+
+        <p>If you have been researching website security, you may have come across the term "OWASP" or "OWASP ZAP." But what do these terms actually mean, and why should you care about them as a business owner? This guide explains OWASP ZAP in plain English and why it matters for your <strong>OWASP website audit</strong>.</p>
+
+        <h2>What Is OWASP?</h2>
+
+        <p>OWASP stands for the Open Web Application Security Project. It is a nonprofit foundation that works to improve software security worldwide. OWASP produces a range of free, open-source resources for web security, including the famous OWASP Top 10 — a standard awareness document that lists the ten most critical web application security risks.</p>
+
+        <p>When we talk about <strong>web application security</strong>, OWASP is the gold standard. Security professionals worldwide use OWASP guidelines to assess and improve the security of web applications.</p>
+
+        <h2>What Is OWASP ZAP?</h2>
+
+        <p>OWASP ZAP (Zed Attack Proxy) is a free, open-source web application security scanner. It is designed to find security vulnerabilities in web applications automatically and, when used by a human, can perform manual security testing as well.</p>
+
+        <p>ZAP works by acting as a "man-in-the-middle" proxy. It intercepts traffic between your browser and the web application, allowing it to analyze requests and responses for security issues. For automated scanning, ZAP spiders your website (crawls it to discover pages and endpoints), then performs an active scan to look for vulnerabilities.</p>
+
+        <h2>What Vulnerabilities Does ZAP Find?</h2>
+
+        <p>ZAP checks for a wide range of web application vulnerabilities, including the OWASP Top 10. Here are the key categories:</p>
+
+        <h3>1. Injection Flaws (SQL Injection, XSS)</h3>
+        <p>ZAP attempts to inject malicious input into forms, URL parameters, and headers to see if the application processes them unsafely. SQL injection can allow attackers to access or modify your database. Cross-site scripting (XSS) can allow attackers to execute scripts in your visitors' browsers.</p>
+
+        <h3>2. Broken Authentication</h3>
+        <p>ZAP checks for authentication weaknesses like session fixation, weak password policies, and improper session management. If your website has a login area, this is a critical check.</p>
+
+        <h3>3. Sensitive Data Exposure</h3>
+        <p>ZAP looks for places where sensitive data (like passwords, credit card numbers, or personal information) might be exposed in URLs, responses, or cookies without proper protection.</p>
+
+        <h3>4. Broken Access Control</h3>
+        <p>This checks whether users can access resources or perform actions they should not be able to. For example, can a regular user access an admin page by guessing the URL?</p>
+
+        <h3>5. Security Misconfigurations</h3>
+        <p>ZAP identifies common misconfigurations like missing security headers, verbose error messages that reveal system information, and unnecessary HTTP methods (like TRACE or OPTIONS) being enabled.</p>
+
+        <h3>6. Using Components with Known Vulnerabilities</h3>
+        <p>ZAP attempts to identify the technologies, libraries, and frameworks your website uses, then cross-references them against known vulnerability databases.</p>
+
+        <h2>How ZAP Fits Into Our Audit Process</h2>
+
+        <p>At abcore pro security, we use <strong>OWASP ZAP</strong> as part of our Audit + Basic Pentest package. While our basic audit uses non-intrusive tools like Nuclei and Nikto, ZAP allows us to go a step further with active scanning that attempts to find vulnerabilities in how your web application handles input.</p>
+
+        <p>Our process with ZAP includes:</p>
+
+        <ul style="margin:20px 0 20px 40px;color:var(--gray-light);">
+          <li style="padding:6px 0;"><strong>Spider scan:</strong> ZAP crawls your website to discover all accessible pages, forms, and endpoints</li>
+          <li style="padding:6px 0;"><strong>Active scan:</strong> ZAP sends specially crafted requests to look for vulnerabilities</li>
+          <li style="padding:6px 0;"><strong>Passive scan:</strong> ZAP analyzes all traffic for security issues without sending attack payloads</li>
+          <li style="padding:6px 0;"><strong>API scan:</strong> If your site has an API, ZAP can test it for API-specific vulnerabilities</li>
+        </ul>
+
+        <p>The raw ZAP output is included in your audit report, so you can see every alert, its risk level, confidence rating, and the evidence that triggered it.</p>
+
+        <h2>ZAP vs Other Security Scanners</h2>
+
+        <p>You might wonder how ZAP compares to other tools we use. Here is the breakdown:</p>
+
+        <ul style="margin:20px 0 20px 40px;color:var(--gray-light);">
+          <li style="padding:6px 0;"><strong>Nuclei:</strong> Fast, template-based vulnerability scanner. Great for known vulnerabilities but less effective at finding application-specific logic flaws.</li>
+          <li style="padding:6px 0;"><strong>Nikto:</strong> Excellent for server-level misconfigurations and known web server vulnerabilities. Less focused on application logic.</li>
+          <li style="padding:6px 0;"><strong>OWASP ZAP:</strong> Specialized for web application security. Better at finding input validation issues, session management flaws, and application-level vulnerabilities.</li>
+        </ul>
+
+        <p>Using all three together gives comprehensive coverage. That is why our <a href="../pricing.html" style="color:var(--primary);">Audit + Basic Pentest package</a> includes all of them.</p>
+
+        <h2>Why Open Source Matters</h2>
+
+        <p>OWASP ZAP is open-source software, which means its code is publicly available for review. This transparency is a security feature in itself — thousands of security researchers review the code, contributing to its reliability and trustworthiness. Proprietary scanners may hide flaws in their own code or use questionable detection methods.</p>
+
+        <p>Because ZAP is open-source, you can verify our findings independently. The raw scan data we provide uses standard ZAP output formats that you can import into your own ZAP instance for verification.</p>
+
+        <h2>Is ZAP Safe for My Website?</h2>
+
+        <p>ZAP's active scan sends attack payloads to your website. While it is designed to be non-destructive, there is always a small risk that an active scan could cause issues with a poorly coded application. This is why we only perform ZAP scans as part of our pentest package (not the basic audit), and we always coordinate with you beforehand to ensure you understand the scope.</p>
+
+        <p>If you want the benefits of ZAP without the active scanning, our basic audit uses ZAP's passive scan capability, which analyzes traffic without sending attack payloads.</p>
+
+        <h2>Getting an OWASP-Style Audit</h2>
+
+        <p>If your website handles sensitive data, processes payments, or has user accounts, an <a href="../services.html" style="color:var(--primary);">OWASP-style audit</a> with ZAP is a smart investment. It goes beyond checking for missing headers and outdated software — it actually tests how your application handles malicious input.</p>
+
+        <p><a href="../contact.html" style="color:var(--primary);">Contact us today</a> to discuss whether the basic audit or the Audit + Basic Pentest package is right for your website.</p>
+
+      </div>
+
+      <div style="margin:50px 0;text-align:center;">
+        <h3 style="margin-bottom:20px;">Get an OWASP-Style Security Audit</h3>
+        <p style="color:var(--gray-light);margin-bottom:30px;">Professional web application security testing with OWASP ZAP and raw data included.</p>
+        <a href="../contact.html" class="btn btn-primary btn-lg">Start Security Review</a>
+        <a href="../pricing.html" class="btn btn-outline btn-lg" style="margin-left:15px;">Compare Packages</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">abcore pro <span>security</span></div>
+        <p>Basic Website Audit & Pentesting.<br>Professional-grade open-source tooling. Raw data included.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../services.html">Basic Website Audit</a></li>
+          <li><a href="../services.html">Audit + Basic Pentest</a></li>
+          <li><a href="../services.html">Multi-Site Audit</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../sample-report.html">Sample Report</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="https://github.com/600589mbm-beep/OSINTSecuritybusiness">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Authorization Agreement</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 abcore pro security. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

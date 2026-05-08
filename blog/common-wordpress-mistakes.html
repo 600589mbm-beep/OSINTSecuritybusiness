@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Common WordPress Security Mistakes | abcore pro security</title>
+  <meta name="description" content="Avoid the most common WordPress security mistakes. A comprehensive WordPress hardening guide and security checklist for site owners.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">abcore pro <span>security</span></div>
+      <ul class="nav-links">
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../pricing.html">Pricing</a></li>
+        <li><a href="../sample-report.html">Sample Report</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../contact.html" class="btn btn-outline">Start Audit</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top:120px;">
+    <div class="container" style="max-width:800px;">
+      <h1>Common WordPress Security Mistakes</h1>
+      <p style="color:var(--gray-light);margin-bottom:30px;font-size:18px;">The most frequent WordPress security mistakes we see — and exactly how to fix each one with our WordPress hardening checklist.</p>
+
+      <div style="color:var(--gray);font-size:14px;margin-bottom:40px;">
+        <span>Published: May8, 2026</span> &middot; <span>Reading time: 11 minutes</span>
+      </div>
+
+      <div style="color:var(--gray-light);line-height:1.8;font-size:17px;">
+
+        <p>WordPress makes it easy to build a website, but that same ease of use leads many site owners to make predictable security mistakes. In our experience auditing hundreds of WordPress sites, the same errors appear again and again. The good news: every one of these <strong>WordPress security mistakes</strong> is fixable once you know about it.</p>
+
+        <h2>1. Using "admin" as the Username</h2>
+
+        <p>This is the oldest mistake in the book, yet it remains one of the most common. The default administrator username in WordPress used to be "admin." Attackers know this, and they specifically target the "admin" username in brute force attacks. If your username is "admin," you have already given attackers half of your login credentials.</p>
+
+        <p><strong>The fix:</strong> Create a new administrator account with a unique username, log in as the new user, and delete the old "admin" account. Assign all content from the old account to the new one.</p>
+
+        <h2>2. Weak Passwords on Administrator Accounts</h2>
+
+        <p>Even with a strong username, a weak password makes your site vulnerable. We frequently see administrator passwords that are dictionary words, simple patterns, or reused across multiple sites. With modern password cracking tools, a weak password can be broken in seconds.</p>
+
+        <p><strong>The fix:</strong> Use a password manager to generate and store complex passwords. A strong WordPress password should be at least 16 characters with a mix of uppercase, lowercase, numbers, and symbols. Better yet, enable two-factor authentication using a plugin like Wordfence or WP 2FA.</p>
+
+        <h2>3. Not Limiting Login Attempts</h2>
+
+        <p>By default, WordPress allows unlimited login attempts. This means an attacker can write a script to try thousands of password combinations against your login page. Without rate limiting, a brute force attack is trivial to execute.</p>
+
+        <p><strong>The fix:</strong> Install a login limit plugin like "Limit Login Attempts Reloaded" or use a web application firewall (like Cloudflare or Wordfence) that provides brute force protection at the network level. Our <strong>WordPress hardening</strong> guide recommends a maximum of 3-5 login attempts before a temporary lockout.</p>
+
+        <h2>4. Keeping Default wp-admin and wp-login Paths</h2>
+
+        <p>Every WordPress site has its login page at /wp-login.php or /wp-admin/. Attackers know this and target these paths specifically. While changing the login URL is not a silver bullet, it reduces noise from automated bots and makes scripted attacks less efficient.</p>
+
+        <p><strong>The fix:</strong> Use a plugin like "WPS Hide Login" to change the login URL to something unique. Just make sure to write down the new path — there is no "forgot login URL" button.</p>
+
+        <h2>5. Installing Too Many Plugins</h2>
+
+        <p>Every plugin you install increases your attack surface. Each plugin is additional code that could contain vulnerabilities. We regularly audit sites with 40, 50, or even 80 plugins installed — many of them inactive but still present on the server.</p>
+
+        <p><strong>The fix:</strong> Audit your plugins regularly. Delete any that you are not actively using. Replace multiple plugins with a single plugin that accomplishes the same task. Question whether you really need each plugin before installing it.</p>
+
+        <h2>6. Using Nulled (Pirated) Themes and Plugins</h2>
+
+        <p>Some site owners download "nulled" (pirated) premium themes and plugins to avoid paying for them. This is one of the most dangerous things you can do. Nulled software is frequently modified to include backdoors, malware, or SEO spam. Even if the file appears clean initially, it cannot be trusted.</p>
+
+        <p><strong>The fix:</strong> Only install themes and plugins from the official WordPress repository or reputable commercial developers. If budget is a concern, there are excellent free alternatives to most premium plugins.</p>
+
+        <h2>7. Not Updating WordPress, Themes, and Plugins</h2>
+
+        <p>We cannot count how many sites we have audited that are running WordPress versions from two or three years ago. Every update includes security fixes. When you skip updates, you are leaving known vulnerabilities unpatched and advertised to the world.</p>
+
+        <p><strong>The fix:</strong> Enable automatic updates for WordPress core (minor releases) and consider auto-updates for plugins as well. At minimum, check for updates weekly. Our <strong>WordPress security checklist</strong> includes a monthly update review process.</p>
+
+        <h2>8. Leaving XML-RPC Enabled</h2>
+
+        <p>XML-RPC is a feature that allows external services to connect to your WordPress site. While it has legitimate uses (like the WordPress mobile app), most small business sites do not need it. Leaving it enabled gives attackers a way to perform brute force attacks more efficiently, since XML-RPC allows multiple authentication attempts in a single request.</p>
+
+        <p><strong>The fix:</strong> If you do not need XML-RPC, disable it by adding a rule to your .htaccess file or using a plugin like "Disable XML-RPC."</p>
+
+        <h2>9. Allowing File Editing from the WordPress Dashboard</h2>
+
+        <p>By default, WordPress allows administrators to edit theme and plugin files directly from the dashboard. This is convenient for developers but dangerous from a security perspective. If an attacker gains admin access, they can inject malicious code into your files without needing FTP or server access.</p>
+
+        <p><strong>The fix:</strong> Add <code style="background:rgba(123,97,255,0.2);padding:2px 6px;border-radius:4px;font-size:14px;">define('DISALLOW_FILE_EDIT', true);</code> to your wp-config.php file. This disables the file editor while still allowing plugin/theme installation.</p>
+
+        <h2>10. Using the Default Table Prefix</h2>
+
+        <p>Many WordPress installations still use the default "wp_" table prefix. This is well-known and makes SQL injection attacks easier to execute because the attacker already knows the table names. A secure installation uses a custom prefix.</p>
+
+        <p><strong>The fix:</strong> For new installations, choose a custom table prefix during setup. For existing sites, use a plugin like "Change Table Prefix" or do it manually via phpMyAdmin. Always back up your database first.</p>
+
+        <h2>Your WordPress Security Checklist</h2>
+
+        <p>Use this <strong>WordPress security checklist</strong> to review your site:</p>
+
+        <ul style="margin:20px 0 20px 40px;color:var(--gray-light);">
+          <li style="padding:6px 0;">Change default "admin" username</li>
+          <li style="padding:6px 0;">Use strong, unique passwords for all accounts</li>
+          <li style="padding:6px 0;">Enable two-factor authentication</li>
+          <li style="padding:6px 0;">Limit login attempts</li>
+          <li style="padding:6px 0;">Change default login URL</li>
+          <li style="padding:6px 0;">Remove unused plugins and themes</li>
+          <li style="padding:6px 0;">Update WordPress core, plugins, and themes regularly</li>
+          <li style="padding:6px 0;">Disable XML-RPC if not needed</li>
+          <li style="padding:6px 0;">Disable file editing from dashboard</li>
+          <li style="padding:6px 0;">Use a custom database table prefix</li>
+          <li style="padding:6px 0;">Install a security plugin (Wordfence, Sucuri, or similar)</li>
+          <li style="padding:6px 0;">Set up automated backups stored offsite</li>
+        </ul>
+
+        <h2>Get a Professional WordPress Security Review</h2>
+
+        <p>This checklist covers the basics, but a professional <a href="../services.html" style="color:var(--primary);">WordPress security audit</a> goes deeper. We use WPScan to identify vulnerable plugins and themes, check for exposed configuration files, review your login page exposure, and scan for known WordPress-specific vulnerabilities.</p>
+
+        <p>Our <a href="../pricing.html" style="color:var(--primary);">$199 basic audit</a> includes all of this, plus SSL/TLS checks, security headers review, and raw scan data from professional-grade tools.</p>
+
+        <p><a href="../contact.html" style="color:var(--primary);">Order your WordPress audit today</a> and get the complete security picture.</p>
+
+      </div>
+
+      <div style="margin:50px 0;text-align:center;">
+        <h3 style="margin-bottom:20px;">Fix Your WordPress Security Mistakes</h3>
+        <p style="color:var(--gray-light);margin-bottom:30px;">Get a professional WordPress security audit with actionable fixes and raw data.</p>
+        <a href="../contact.html" class="btn btn-primary btn-lg">Start WordPress Audit</a>
+        <a href="../sample-report.html" class="btn btn-outline btn-lg" style="margin-left:15px;">View Sample Report</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">abcore pro <span>security</span></div>
+        <p>Basic Website Audit & Pentesting.<br>Professional-grade open-source tooling. Raw data included.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../services.html">Basic Website Audit</a></li>
+          <li><a href="../services.html">Audit + Basic Pentest</a></li>
+          <li><a href="../services.html">Multi-Site Audit</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../sample-report.html">Sample Report</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="https://github.com/600589mbm-beep/OSINTSecuritybusiness">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Authorization Agreement</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 abcore pro security. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

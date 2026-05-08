@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Security Checklist for Small Businesses | abcore pro security</title>
+  <meta name="description" content="A comprehensive website security checklist for small businesses. Use this website risk assessment to protect your site from common threats and vulnerabilities.">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">abcore pro <span>security</span></div>
+      <ul class="nav-links">
+        <li><a href="../services.html">Services</a></li>
+        <li><a href="../pricing.html">Pricing</a></li>
+        <li><a href="../sample-report.html">Sample Report</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+        <li><a href="../contact.html" class="btn btn-outline">Start Audit</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top:120px;">
+    <div class="container" style="max-width:800px;">
+      <h1>Website Security Checklist for Small Businesses</h1>
+      <p style="color:var(--gray-light);margin-bottom:30px;font-size:18px;">A comprehensive website risk assessment checklist to help small businesses protect their online presence from common security threats.</p>
+
+      <div style="color:var(--gray);font-size:14px;margin-bottom:40px;">
+        <span>Published: May8, 2026</span> &middot; <span>Reading time: 12 minutes</span>
+      </div>
+
+      <div style="color:var(--gray-light);line-height:1.8;font-size:17px;">
+
+        <p>Small businesses face a disproportionate burden when it comes to website security. You probably do not have a dedicated IT security team, and you cannot afford to spend days researching every possible threat. That is why we created this <strong>website security checklist</strong> — a practical, actionable list you can work through to significantly improve your security posture.</p>
+
+        <p>This checklist is organized by category. Work through each section, check off the items you have completed, and make a plan to address the ones you have not.</p>
+
+        <h2>Section 1: SSL/TLS and Encryption</h2>
+
+        <div style="background:var(--dark-secondary);padding:20px;border-radius:8px;margin:20px 0;">
+          <p style="margin:0 0 8px 0;">Check all that apply to your website:</p>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">SSL certificate is installed and valid</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Certificate auto-renews before expiration</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Only TLS 1.2 and 1.3 are enabled (TLS 1.0/1.1 disabled)</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">HSTS header is configured with at least 1 year max-age</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Certificate chain is complete (no missing intermediate certs)</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">No mixed content warnings (all resources load over HTTPS)</label>
+        </div>
+
+        <p>Need help with SSL/TLS? Read our guide on <a href="ssl-tls-website-security.html" style="color:var(--primary);">SSL/TLS website security</a> or get a professional <a href="ssl-tls-website-security.html" style="color:var(--primary);">SSL certificate audit</a>.</p>
+
+        <h2>Section 2: Security Headers</h2>
+
+        <div style="background:var(--dark-secondary);padding:20px;border-radius:8px;margin:20px 0;">
+          <p style="margin:0 0 8px 0;">Check all that apply to your website:</p>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Content-Security-Policy header is configured</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">X-Frame-Options is set to DENY or SAMEORIGIN</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">X-Content-Type-Options is set to nosniff</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Referrer-Policy is configured appropriately</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Permissions-Policy restricts unnecessary browser features</label>
+        </div>
+
+        <p>Our <a href="why-security-headers-matter.html" style="color:var(--primary);">security headers guide</a> explains each header in detail and shows you how to configure them.</p>
+
+        <h2>Section 3: CMS and Plugin Security (WordPress Focus)</h2>
+
+        <div style="background:var(--dark-secondary);padding:20px;border-radius:8px;margin:20px 0;">
+          <p style="margin:0 0 8px 0;">Check all that apply:</p>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">WordPress core is updated to the latest version</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">All plugins are updated to current versions</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Unused plugins and themes are deleted (not just deactivated)</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">No plugins or themes from unknown sources</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Default "admin" username has been changed</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Strong passwords enforced for all user accounts</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Two-factor authentication is enabled</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Login attempts are rate-limited</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">XML-RPC is disabled if not needed</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">File editing from dashboard is disabled</label>
+        </div>
+
+        <p>For a deeper dive, see our <a href="common-wordpress-mistakes.html" style="color:var(--primary);">WordPress security mistakes</a> guide and <a href="wordpress-security-risks.html" style="color:var(--primary);">WordPress risk assessment</a> article.</p>
+
+        <h2>Section 4: Server and Hosting Security</h2>
+
+        <div style="background:var(--dark-secondary);padding:20px;border-radius:8px;margin:20px 0;">
+          <p style="margin:0 0 8px 0;">Check all that apply:</p>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Directory listing is disabled on the web server</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Server version information is hidden in HTTP headers</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Sensitive files (.git, .env, backups) are not publicly accessible</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Backups are stored offsite and encrypted</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Hosting provider offers isolated environments (not shared hosting with neighbors)</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Regular server OS and software updates are applied</label>
+        </div>
+
+        <p>Concerned about your hosting? Read our guide on <a href="cheap-hosting-security-risks.html" style="color:var(--primary);">cheap hosting security risks</a>.</p>
+
+        <h2>Section 5: Monitoring and Maintenance</h2>
+
+        <div style="background:var(--dark-secondary);padding:20px;border-radius:8px;margin:20px 0;">
+          <p style="margin:0 0 8px 0;">Check all that apply:</p>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Website is scanned for vulnerabilities at least monthly</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Uptime monitoring is configured (alerts when site goes down)</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Google Search Console is set up to detect malware/hacking</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">File integrity monitoring is in place (alerts on file changes)</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Access logs are reviewed periodically for suspicious activity</label>
+        </div>
+
+        <h2>Section 6: Business Continuity</h2>
+
+        <div style="background:var(--dark-secondary);padding:20px;border-radius:8px;margin:20px 0;">
+          <p style="margin:0 0 8px 0;">Check all that apply:</p>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Recent backup is available and tested (can be restored)</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Someone is responsible for security updates and monitoring</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Incident response plan exists (what to do if site is hacked)</label>
+          <label style="display:block;padding:4px 0;cursor:pointer;"><input type="checkbox" style="margin-right:8px;">Contact information for a security professional is readily available</label>
+        </div>
+
+        <h2>Using This Checklist for Small Business Cybersecurity</h2>
+
+        <p>This <strong>small business cybersecurity</strong> checklist covers the fundamentals. If you checked fewer than 75% of the items, your website likely has security gaps that need attention. The good news is that most of these items are straightforward to implement.</p>
+
+        <p>For items you are unsure about, consider a professional <a href="../services.html" style="color:var(--primary);">website security audit</a>. We check every item on this checklist and more, then give you a prioritized list of what to fix first.</p>
+
+        <h2>Make This a Living Document</h2>
+
+        <p>Security is not a one-time task. Revisit this <strong>website risk assessment</strong> every quarter. New threats emerge, software gets updated, and your website evolves. A quarterly review keeps your security posture current.</p>
+
+        <p>Need help working through this checklist? <a href="../contact.html" style="color:var(--primary);">Contact us</a> for a professional audit that covers every item and provides the raw data to prove it.</p>
+
+      </div>
+
+      <div style="margin:50px 0;text-align:center;">
+        <h3 style="margin-bottom:20px;">Get Your Website Security Audit</h3>
+        <p style="color:var(--gray-light);margin-bottom:30px;">Professional security assessment covering every item on this checklist. $199.</p>
+        <a href="../contact.html" class="btn btn-primary btn-lg">Start My Audit</a>
+        <a href="../pricing.html" class="btn btn-outline btn-lg" style="margin-left:15px;">View Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="logo">abcore pro <span>security</span></div>
+        <p>Basic Website Audit & Pentesting.<br>Professional-grade open-source tooling. Raw data included.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="../services.html">Basic Website Audit</a></li>
+          <li><a href="../services.html">Audit + Basic Pentest</a></li>
+          <li><a href="../services.html">Multi-Site Audit</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../sample-report.html">Sample Report</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+          <li><a href="index.html">Blog</a></li>
+          <li><a href="https://github.com/600589mbm-beep/OSINTSecuritybusiness">GitHub</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Authorization Agreement</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 abcore pro security. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
