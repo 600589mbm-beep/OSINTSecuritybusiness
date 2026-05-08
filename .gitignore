@@ -1,0 +1,34 @@
+# OSINT Security Website
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+
+# Reports (keep samples, exclude client data)
+clients/
+!clients/.gitkeep
+reports/*
+!reports/sample-megaeth.md
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temp
+tmp/
+temp/
+.cache/
